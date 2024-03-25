@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript"> 
+        var i, j;
+        const d = [5, 6, 4, 7, 3, 8, 2, 9, 1, 0];
+        const n = d.length;
+        document.write("Arreglo desordenado<br>");
+        for(i=0; i<n; i++){
+            document.write(d[i]+" ");
+        }
+        for(i = 0; i < n; i++){
+            for(j = 0; j < n - 1; j++){
+                if(d[j] > d[j+1]){
+                    aux = d[j];
+                    d[j] = d[j+1];
+                    d[j+1] = aux;
+                }
+            }
+        }
+        document.write("<br>Arreglo ordenado<br>");
+        for(i=0; i<n; i++){
+            document.write(d[i]+" ");
+        }
+    </script>
+</body>
+</html>l

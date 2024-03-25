@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        var a, i, j, aux, min;
+        const d = [2, 1, 4, 3, 6, 5, 8, 7 , 9, 0];
+        const n = d.length;
+        document.write("Arreglo desordenado <br>" );
+        for(a = 0; a < n; a++){
+            document.write(d[a]+" ");
+        }
+        for(i=0; i < n - 1; i++){
+            min = i;
+            for(j=i+1; j<n; j++){
+                if(d[min]>d[j]){
+                    min = j;
+                }
+            }
+            aux = d[min];
+            d[min] = d[i];
+            d[i] = aux;
+        }
+        document.write("<br> arreglo ordenado <br>");
+        for(a = 0; a < n; a++){
+            document.write(d[a]+" ");
+        }
+    </script>
+
+</body>
+</html>

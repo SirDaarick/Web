@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Secuencia de Textos</title>
+</head>
+<body>
+    <script>
+        var cantidad = parseInt(prompt("¿Cuántos textos quieres ingresar?"));
+        var textos = [];
+    
+        for(var i = 0; i < cantidad; i++) {
+            textos[i] = prompt("Ingresa el texto número " + (i + 1));
+        }
+    
+        document.write("Textos procesados:<br>");
+        for(var j = 0; j < textos.length; j++) {
+            document.write("Texto: " + textos[j] + "<br>");
+            document.write("Longitud: " + textos[j].length + "<br>");
+            document.write("En mayúsculas: " + textos[j].toUpperCase() + "<br>");
+            document.write("En minúsculas: " + textos[j].toLowerCase() + "<br><br>");
+        }
+    
+    </script>
+</body>
+</html>

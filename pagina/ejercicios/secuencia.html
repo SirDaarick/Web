@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        var n = prompt("Ingrese la cantidad de numeros");
+        n = parseInt(n);
+        d = new Array(n);
+        var a;
+        for(var i = 0; i < n ; i++){
+            a = prompt("Ingrese el numero " + i );
+            d[i] = parseInt(a);
+        }
+        for (i = 1; i < d.length; i++) {
+            j = i;
+            while (j > 0 && d[j] < d[j - 1]) {
+                aux = d[j];
+                d[j] = d[j - 1];
+                d[j - 1] = aux;
+                j--;
+            }
+        }
+        document.write("<br>Arreglo ordenado: ");
+        for (i = 0; i < d.length; i++) {
+            document.write(d[i] + ", ");
+        }
+    </script>
+</body>
+</html>

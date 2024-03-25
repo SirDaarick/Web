@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        var i, j, aux;
+        const d = [2, 4, 6, 1, 7, 5, 9, 8, 0, 3];
+        
+        document.write("Arreglo desordenado: ");
+        for (i = 0; i < d.length; i++) {
+            document.write(d[i] + ", ");
+        }
+        
+        for (i = 1; i < d.length; i++) {
+            j = i;
+            while (j > 0 && d[j] < d[j - 1]) {
+                aux = d[j];
+                d[j] = d[j - 1];
+                d[j - 1] = aux;
+                j--;
+            }
+        }
+        
+        document.write("<br>Arreglo ordenado: ");
+        for (i = 0; i < d.length; i++) {
+            document.write(d[i] + ", ");
+        }
+        
+    </script>
+</body>
+</html>
